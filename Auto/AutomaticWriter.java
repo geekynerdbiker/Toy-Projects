@@ -1,4 +1,9 @@
+// PASSWORD: Qd0-75y-GE8-8yY
+
 package com.company;
+
+import org.openqa.selenium.WebElement;
+import org.w3c.dom.Element;
 
 import java.io.*;
 import java.util.Vector;
@@ -6,7 +11,6 @@ import java.util.Vector;
 public class Main {
     private static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     private static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-    //private static char [][] keywords = {};
 
     public static Vector<String> Reader(String path) {
         Vector<String> test = new Vector<String>();
@@ -30,38 +34,17 @@ public class Main {
         return test;
     }
 
-    public static void printScript() {
-        Vector<String> v = Reader("src/com/company/answer/script.txt");
-        for( int i = 0; i < v.size(); i++ ) {
-            char [] sentence = v.get(i).toCharArray();
+    public static void scriptSender(Vector<String> v, WebElement e) throws InterruptedException {
+        char[] sentence = v.get(0).toCharArray();
 
-            for( int j = 0; j < sentence.length; j++ ) {
-                System.out.print(sentence[j]);
-                try {
-                    Thread.sleep(230);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-            // send
-            System.out.println();
+        for(int i = 0; i < sentence.length; i++) {
+            e.sendKeys(Character.toString(sentence[i]));
+            Thread.sleep(230);
         }
     }
 
     public static void main(String[] args) throws IOException {
-        Vector<String> string = Reader("src/com/company/answer/test.txt");
-
-        printScript();
-
-/*
-        // sample
-        for( int i = 0; i < string.size(); i++ )
-            System.out.println(string.get(i));
-
-        System.out.println();
-        // random sample
-       // for( int i = 0; i < 10; i++ )
-            System.out.println(string.get((int)(Math.random() * string.size())));
-*/
+        Selenium macro = new Selenium();
+        macro.start();
     }
 }
