@@ -16,7 +16,7 @@ import javax.sound.sampled.TargetDataLine;
 public class AudioRecorder extends Thread {
 
     private static TargetDataLine mic;
-ㄴ
+
     public void AudioRecorder() {
 
 //        initRecording();
