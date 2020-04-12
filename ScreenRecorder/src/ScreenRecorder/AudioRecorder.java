@@ -25,7 +25,7 @@ public class AudioRecorder extends Thread {
     private void initRecording() {
 
         System.out.println("begin sound test...");
-ㄴ
+
         try {
 
             //define audio format
