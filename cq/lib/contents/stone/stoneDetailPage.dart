@@ -11,7 +11,7 @@ class _StoneDetailPage extends State<StoneDetailPage>
 
   List<Tab> _tabs = [
     Tab(
-      child: Text('1 Star'),
+      child: Text('1 Star' ),
     ),
     Tab(
       child: Text('2 Star'),
