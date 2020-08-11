@@ -11,16 +11,36 @@ class _StoneDetailPage extends State<StoneDetailPage>
 
   List<Tab> _tabs = [
     Tab(
-      child: Text('1 Star' ),
+      child: Row(
+        children: [
+          Text('1 '),
+          Icon(Icons.star),
+        ],
+      ),
     ),
     Tab(
-      child: Text('2 Star'),
+      child: Row(
+        children: [
+          Text('2 '),
+          Icon(Icons.star),
+        ],
+      ),
     ),
     Tab(
-      child: Text('3 Star'),
+      child: Row(
+        children: [
+          Text('3 '),
+          Icon(Icons.star),
+        ],
+      ),
     ),
     Tab(
-      child: Text('4 Star'),
+      child: Row(
+        children: [
+          Text('4 '),
+          Icon(Icons.star),
+        ],
+      ),
     ),
   ];
 
@@ -49,7 +69,10 @@ class _StoneDetailPage extends State<StoneDetailPage>
       ),
       backgroundColor: Colors.white,
       body: Container(
-        height: MediaQuery.of(context).size.height,
+        height: MediaQuery
+            .of(context)
+            .size
+            .height,
         child: Column(
           children: [
             TabBar(
